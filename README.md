@@ -46,7 +46,7 @@ python app.py
 ```
 
 This will:
-- Load the support agent prompt from `prompt/support_agent_v1.yaml`
+- Load the support agent prompt from `prompts/support_agent_v1.yaml`
 - Run multiple test scenarios including:
   - **Prompt injection attempts** (blocked)
   - **Rate limiting + retry** (automatic backoff)
@@ -87,7 +87,7 @@ SCENARIO 5: Circuit breaker opens after 3 consecutive failures
 │   ├── Circuit breaker implementation
 │   ├── Mock-injectable invoker
 │   └── 5+ test scenarios
-├── prompt/
+├── prompts/
 │   └── support_agent_v1.yaml       # Agent system prompt (YAML format)
 ├── requirements.txt                # Python dependencies
 ├── .env                            # Environment variables (not in git)
@@ -262,7 +262,7 @@ class CircuitBreaker:
 
 ### Error: `ScannerError` in YAML
 **Cause:** Tabs in YAML file (YAML only accepts spaces)  
-**Fix:** Replace all tabs with spaces in `prompt/support_agent_v1.yaml`
+**Fix:** Replace all tabs with spaces in `prompts/support_agent_v1.yaml`
 
 ### Error: `InvalidRequestError` or context length exceeded
 **Cause:** Input messages exceed model's token limit  

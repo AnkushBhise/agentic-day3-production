@@ -411,7 +411,7 @@ def budget_aware_invoke(tracker: SessionCostTracker, messages: list) -> str:
 
 
 def main() -> None:
-	prompt_path = "prompt/support_agent_v1.yaml"
+	prompt_path = "prompts/support_agent_v1.yaml"
 	with open(prompt_path, 'r', encoding='utf-8') as f:
 		prompt_data = yaml.safe_load(f)
 
